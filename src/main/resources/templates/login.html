@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Sector Login</title>
+</head>
+
+<body>
+<div class="d-flex justify-content-center mt-5">
+	<div class="card" style="width: 18rem;">
+		<div class="card-body text-center">
+			<div class="alert alert-danger" role="alert" th:if="${param.error}">Invalid username and password.</div>
+			<form th:action="@{/login}" method="post" class="form-signin">
+				<h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+				<label for="username" class="sr-only">Username</label>
+				<input type="text" id="username" name="username" class="form-control m-2" placeholder="admin"
+					   required autofocus>
+				<label for="password" class="sr-only">Password</label>
+				<input type="password" id="password" name="password" class="form-control m-2" placeholder="password"
+					   required>
+				<hr class="m-1"/>
+				<button class="btn btn-lg btn-primary" type="submit">Login</button>
+
+				<table class="table table-sm text-left mt-5">
+					<thead>
+					<tr>
+						<th scope="col">Username</th>
+						<th scope="col">Password</th>
+					</tr>
+					</thead>
+					<tbody class="text-monospace">
+					<tr>
+						<td>
+							admin
+						</td>
+						<td>
+							password
+						</td>
+					<tr>
+					<tr>
+						<td>
+							demo
+						</td>
+						<td>
+							password
+						</td>
+					<tr>
+					<tr>
+						<td>
+							johndoe
+						</td>
+						<td>
+							password
+						</td>
+					<tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+<footer class="m-3 text-muted text-center text-small">
+	<a href="https://tufan.ee">tufan.ee</a>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>
